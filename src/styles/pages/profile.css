@@ -1,0 +1,337 @@
+.profile-content {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(248, 250, 252, 0.8);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-actions .action-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="2" fill="white"/></svg>');
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.profile-info {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.profile-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.profile-position {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.profile-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px 16px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 1.4;
+}
+
+.meta-item strong {
+  margin-right: 8px;
+}
+
+.profile-details {
+  padding: 0;
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.detail-section {
+  padding: 2.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  background: white;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.detail-section:nth-child(even) {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+.detail-section:last-child {
+  border-bottom: none;
+}
+
+.detail-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.detail-section:hover::before {
+  opacity: 1;
+}
+
+.detail-section h2 {
+  color: #2d3748;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  line-height: 1.4;
+}
+
+.detail-section h2 svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.detail-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f7fafc;
+  gap: 2rem;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item strong {
+  color: #4a5568;
+  font-weight: 600;
+  min-width: 200px;
+  font-size: 1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.detail-item > *:not(strong) {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+
+.contact-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+  word-break: break-all;
+  text-align: left;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+.position-badge.large {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+  display: inline-block;
+}
+
+.department-tag.large {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+  display: inline-block;
+}
+
+.salary-amount.large {
+  color: #2d3748;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0;
+  text-align: left;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(237, 137, 54, 0.3);
+  transition: all 0.3s ease;
+  line-height: 1.4;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(237, 137, 54, 0.4);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f7fafc, #edf2f7);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.stat-label {
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.detail-section {
+  transition: all 0.3s ease;
+}
+
+.detail-section:hover {
+  background: rgba(102, 126, 234, 0.02) !important;
+  transform: translateX(5px);
+}
+
+.detail-section + .detail-section {
+  border-top: 1px solid #e2e8f0;
+}
+
+.detail-section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2.5rem;
+  right: 2.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.detail-section:nth-child(1) { animation-delay: 0.1s; }
+.detail-section:nth-child(2) { animation-delay: 0.2s; }
+.detail-section:nth-child(3) { animation-delay: 0.3s; }
+.detail-section:nth-child(4) { animation-delay: 0.4s; }
